@@ -1,0 +1,16 @@
+<html>
+<script>
+//React when a browser action's icon is clicked.
+chrome.browserAction.onClicked.addListener(function(tab) {
+    var viewOptions = chrome.extension.getURL('options.html');
+    var firstRun = (localStorage['firstRun'] == 'true');
+
+    //If this view has the right URL and hasn't been used yet...
+    if (!firstRun) {
+        viewOptions;
+        localStorage['firstRun'] = 'true';
+        //break;
+    }
+});
+</script>
+</html>
