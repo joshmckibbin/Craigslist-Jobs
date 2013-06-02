@@ -1,54 +1,16 @@
 <!doctype html>
 <html>
 <head>
-<title>Craigslist Jobs Options</title>
-<link rel="stylesheet" type="text/css" href="styles.css" />
-<script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-	
-	$("#state").change(function(){
-        var state = $(this).val();
- 		$(".city").hide().attr('disabled','disabled');
-        $("#"+state).show().removeAttr("disabled");
-    });
-	
-	// Saves options to localStorage.
-	$("#save-btn").click(function(){
-		localStorage["entry_qty"] = $("#entry_qty").val();
-		localStorage["job_type"] = $("#job_type").val();
-		localStorage["state"] = $("#state").val();
-		localStorage["city"] = $("select.city:enabled").val();
-		window.location = "popup.html";
-	});
-	
-	// Saves options to localStorage.
-	$("#cancel-btn").click(function(){
-		window.location = "popup.html";
-	});
-	
-	// Restores select box state to saved value from localStorage.
-	var qty = localStorage["entry_qty"];
-	var type = localStorage["job_type"];
-	var state = localStorage["state"];
-	var city = localStorage["city"];
-	
-	if (!qty || !type || !state || !city) {
-		return;
-	}
-	
-	$("#entry_qty").val(qty);
-	$("#job_type").val(type);
-	$("#state").val(state);
-	$(".city").hide().attr('disabled','disabled');
-	$("#"+state).show().removeAttr("disabled");
-	$("#"+state).val(city);
-});
-</script>
+    <title>Craigslist Jobs Options</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="options.js"></script>
 </head>
 <body>
 <div id="box">
-    <div id="title">Options for Craigslist Jobs</div>
+    <div id="header">
+        <div id="title">Options for Craigslist Jobs</div>
+    </div>
     <div id="main-content" class="options">
         Category / State:
         <select id="state">

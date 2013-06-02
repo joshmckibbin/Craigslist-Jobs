@@ -1,18 +1,22 @@
 {
-  "name": "Craigslist Jobs",
-  "version": "1.2",
-  "description": "Search for jobs.",
-  "homepage_url": "http://joshmckibbin.com/blog/2011/09/philly-jobs-chrome-extension/",
-  "browser_action": {
-    "default_icon": "icon_19.png",
-    "popup": "popup.html"
-  },
-  "icons": {
-  	"128":"icon_128.png",
-  	"48":"icon_48.png",
-  	"16":"icon_16.png"
-  },
-  "permissions": [
-    "http://*.craigslist.org/"
-  ]
+    "manifest_version": 2,
+
+    "name": "Craigslist Jobs",
+    "version": "1.4",
+    "description": "Search for jobs.",
+    "homepage_url": "http://craigslistjobs.joshmckibbin.com",
+
+    "browser_action": {
+      "default_icon": "icon_19.png",
+      "default_popup": "popup.html",
+      "default_title": "Search for a job on Craigslist"
+    },
+    "icons": {
+        "16": "icon_16.png",
+        "48": "icon_48.png",
+        "128": "icon_128.png"
+    },
+    "permissions": [
+      "http://*.craigslist.org/"
+    ]
 }
