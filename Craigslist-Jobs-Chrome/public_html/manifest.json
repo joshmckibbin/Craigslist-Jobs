@@ -3,7 +3,7 @@
 
     "name": "Craigslist Jobs",
     "version": "1.5",
-    "description": "Search for jobs.",
+    "description": "Search for jobs on Craigslist.",
     "homepage_url": "http://craigslistjobs.joshmckibbin.com",
 
     "browser_action": {
