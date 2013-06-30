@@ -126,6 +126,9 @@ input {
 .city {
     display: none;
 }
+label {
+    display: block;
+}
 select {
     text-transform:capitalize;
     display: block;

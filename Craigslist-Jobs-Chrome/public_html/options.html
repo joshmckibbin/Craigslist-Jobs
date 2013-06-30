@@ -3,7 +3,7 @@
 <head>
     <title>Craigslist Jobs Options</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-1.10.1.min.js"></script>
     <script type="text/javascript" src="options.js"></script>
 </head>
 <body>
@@ -12,7 +12,7 @@
         <div id="title">Options</div>
     </div>
     <div id="main-content" class="options">
-        Category / State:
+        <label for="state">Category / State:</label>
         <select id="state">
             <option value="US-Cities">All Major US Cities</option>
             <option value="" disabled>--</option>
@@ -70,7 +70,7 @@
             <option value="" disabled>--</option>
             <option value="Territories">US Territories</option>
         </select>
-        City:
+        <label>City:</label>
         <select id="US-Cities" class="city">
             <option value="atlanta">Atlanta</option>
             <option value="austin">Austin</option>
@@ -619,7 +619,7 @@
             <option value="puertorico">puerto rico</option>
             <option value="virgin">U.S. virgin islands</option>
         </select>
-        Job Type:
+        <label for="job_type">Job Type:</label>
         <select id="job_type" class="job-type">
             <option value="jjj">all jobs</option>
             <option value="ofc">admin/office jobs</option>
@@ -656,7 +656,7 @@
             <option value="web">web design jobs</option>
             <option value="wri">writing jobs</option>
         </select>
-        No. of Entries:
+        <label for="entry_qty">No. of Entries:</label>
         <select id="entry_qty">
             <option value="25">25</option>
             <option value="50">50</option>
