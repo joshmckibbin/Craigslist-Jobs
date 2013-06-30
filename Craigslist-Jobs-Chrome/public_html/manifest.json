@@ -2,7 +2,7 @@
     "manifest_version": 2,
 
     "name": "Craigslist Jobs",
-    "version": "1.4",
+    "version": "1.5",
     "description": "Search for jobs.",
     "homepage_url": "http://craigslistjobs.joshmckibbin.com",
 
