@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+
+    "name": "Craigslist Jobs",
+    "version": "1.5",
+    "description": "Search for jobs on Craigslist.",
+    "homepage_url": "http://craigslistjobs.joshmckibbin.com",
+
+    "browser_action": {
+      "default_icon": "icon_19.png",
+      "default_popup": "popup.html",
+      "default_title": "Search for a job on Craigslist"
+    },
+    "icons": {
+        "16": "icon_16.png",
+        "48": "icon_48.png",
+        "128": "icon_128.png"
+    },
+    "permissions": [
+      "http://*.craigslist.org/"
+    ]
+}
