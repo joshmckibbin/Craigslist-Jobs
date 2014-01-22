@@ -3,7 +3,7 @@ Craigslist Jobs
 
 <strong>A Google Chrome extension for searching and applying for jobs on Craigslist.</strong>
 
-
+&nbsp;
 
 All relevant application files are located in [app](/app/).
 
@@ -13,6 +13,7 @@ Current and previous versions (as zip archives) are located in [versions](/versi
 
 To install in Google Chrome: [Chrome Web Store](http://chrome.google.com/webstore/detail/ihfloajilpmkghkiknpeamadkcnljjek).
 
+&nbsp;
 
 ---
 
