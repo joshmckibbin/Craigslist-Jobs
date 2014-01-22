@@ -123,6 +123,7 @@ input {
     width: 280px;
     padding: 14px 0 14px 30px;
 }
+.country,
 .city {
     display: none;
 }
