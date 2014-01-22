@@ -16,4 +16,4 @@ To install in Google Chrome: [Chrome Web Store](http://chrome.google.com/webstor
 
 ---
 
-For more information: [joshmckibbin.com](http://kibb.in/cljobs)
+For more information: [kibb.in/cljobs](http://kibb.in/cljobs)
