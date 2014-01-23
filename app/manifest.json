@@ -2,9 +2,9 @@
     "manifest_version": 2,
 
     "name": "Craigslist Jobs",
-    "version": "1.5",
+    "version": "1.7",
     "description": "Search for jobs on Craigslist.",
-    "homepage_url": "http://craigslistjobs.joshmckibbin.com",
+    "homepage_url": "http://kibb.in/cljobs",
 
     "browser_action": {
       "default_icon": "icon_19.png",
@@ -17,6 +17,7 @@
         "128": "icon_128.png"
     },
     "permissions": [
-      "http://*.craigslist.org/"
+      "http://*.craigslist.org/",
+      "http://*.craigslist.ca/"
     ]
 }

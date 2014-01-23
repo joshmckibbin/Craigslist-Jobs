@@ -14,16 +14,18 @@ function parseXml(xml){
     $(".entry h2 a").click(function(e){
         $('.entry p').not($(this).parent().siblings("p")).slideUp();
         $(this).css('color','rgb(13,68,110)').parent().siblings("p").slideToggle();
-     //   $(this).css('color','rgb(13,68,110)').parent().css('font-weight','normal').siblings("p").slideToggle();
         e.preventDefault();
     });    
+}
+
+function failXml(){
+    $("#main-content").append("<p>Error loading xml file.</p>");
 }
 
 $(function(){
     var type = localStorage["job_type"];
     var country = localStorage["country"];
     var city = localStorage["city"];
-    //var province = localStorage["province"];
     switch(country){
         case "US":
         switch(city){
@@ -582,15 +584,16 @@ $(function(){
     if(!city){ // If no location has been selected, show the options page...
         window.location = "options.html";
     }else{ // Otherwise...
-        var dm = "org";
-        switch(country){
+        /*switch(country){
             case "US":
-            dm = "org";
+            var preurl = "http://"+city+".craigslist.org/";
             break;
             case "Canada":
-            dm = "ca";
-        }
-        var preurl = "http://"+city+".craigslist."+dm+"/";
+            var preurl = "http://"+city+".en.craigslist.ca/";
+            break;
+        }*/
+
+        var preurl = "http://"+city+".craigslist.org/";
 
         $("#title").html(cityname+" Jobs:");
         $('#search form').attr('action',preurl+'search/'+type);
@@ -599,8 +602,9 @@ $(function(){
             type: "GET",
             async: true,
             url: preurl+type+"/index.rss",
-            dataType: "xml",
-            success: parseXml
-        });
+            dataType: "xml"
+        })
+        .done(parseXml)
+        .fail(failXml);
     }
 });
