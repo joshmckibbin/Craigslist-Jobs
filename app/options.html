@@ -3,15 +3,16 @@
 <head>
     <title>Craigslist Jobs Options</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script type="text/javascript" src="jquery-1.10.1.min.js"></script>
+    <!-- <script type="text/javascript" src="jquery-1.10.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="options.js"></script>
 </head>
 <body>
 <div id="box">
-    <div id="header">
+    <header id="header">
         <div id="title">Options</div>
-    </div>
-    <div id="main-content" class="options">
+    </header>
+    <main id="main-content" class="options">
         <label for="country">Country / Region:</label>
         <select id="country">
             <option value="">&mdash;</option>
@@ -772,10 +773,10 @@
         </select>
         <button id="save-btn">Save</button>
         <button id="cancel-btn">Cancel</button>
-    </div>
-    <div id="footer">
+    </main>
+    <footer id="footer">
     	Developed by <a href="http://joshmckibbin.com" target="_blank">J.Mckibbin</a> | Powered by <a href="http://craigslist.org" target="_blank">Craigslist</a>
-    </div>
+    </footer>
 </div>
 </body>
 </html>
