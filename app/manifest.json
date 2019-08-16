@@ -17,7 +17,7 @@
         "128": "icon_128.png"
     },
     "permissions": [
-      "http://*.craigslist.org/",
-      "http://*.craigslist.ca/"
+      "https://*.craigslist.org/",
+      "https://*.craigslist.ca/"
     ]
 }

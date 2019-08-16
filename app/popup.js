@@ -593,7 +593,7 @@ $(function(){
             break;
         }*/
 
-        var preurl = "http://"+city+".craigslist.org/";
+        var preurl = "https://"+city+".craigslist.org/";
 
         $("#title").html(cityname+" Jobs:");
         $('#search form').attr('action',preurl+'search/'+type);
@@ -601,7 +601,8 @@ $(function(){
         $.ajax({
             type: "GET",
             async: true,
-            url: preurl+type+"/index.rss",
+            //url: preurl+type+"/search?format=rss",
+	        url: preurl+"search/"+type+"?format=rss",
             dataType: "xml"
         })
         .done(parseXml)
