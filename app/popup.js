@@ -1,5 +1,6 @@
 function parseXml(xml){
-    $(xml).find("item").slice(0,localStorage["entry_qty"]).each(function(){
+    //$(xml).find("item").slice(0,localStorage["entry_qty"]).each(function(){
+    $(xml).find("item").each(function(){
         var title = $(this).find("title").first().text(),
         description = $(this).find("description").text(),
         link = $(this).find("link").text();
@@ -592,17 +593,25 @@ $(function(){
             var preurl = "http://"+city+".en.craigslist.ca/";
             break;
         }*/
+        var keywords = localStorage["keywords"];
+        var kw = keywords.replace(" ", "+");
 
         var preurl = "https://"+city+".craigslist.org/";
 
         $("#title").html(cityname+" Jobs:");
         $('#search form').attr('action',preurl+'search/'+type);
+
+        if (kw != "") {
+            var url = preurl+"search/"+type+"?format=rss&query="+kw;
+        } else {
+            var url = preurl+"search/"+type+"?format=rss";
+        }
         
         $.ajax({
             type: "GET",
             async: true,
             //url: preurl+type+"/search?format=rss",
-	        url: preurl+"search/"+type+"?format=rss",
+	        url: url,
             dataType: "xml"
         })
         .done(parseXml)

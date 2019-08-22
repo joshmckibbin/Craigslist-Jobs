@@ -2,7 +2,7 @@
     "manifest_version": 2,
 
     "name": "Craigslist Jobs",
-    "version": "1.7",
+    "version": "1.9",
     "description": "Search for jobs on Craigslist.",
     "homepage_url": "http://kibb.in/cljobs",
 

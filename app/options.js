@@ -24,7 +24,8 @@ $(function(){
     // Saves options to localStorage.
     $("#save-btn").click(function(){
         var country = $("#country").val();
-        localStorage["entry_qty"] = $("#entry_qty").val();
+        //localStorage["entry_qty"] = $("#entry_qty").val();
+        localStorage["keywords"] = $("#keywords").val();
         localStorage["job_type"] = $("#job_type").val();
         localStorage["country"] = country;
         switch(country){
@@ -39,23 +40,25 @@ $(function(){
         window.location = "popup.html";
     });
 
-    // Saves options to localStorage.
+    // Cancels the save.
     $("#cancel-btn").click(function(){
         window.location = "popup.html";
     });
 
     // Restores select box state to saved value from localStorage.
-    var qty = localStorage["entry_qty"];
+    //var qty = localStorage["entry_qty"];
+    var keywords = localStorage["keywords"];
     var type = localStorage["job_type"];
     var country = localStorage["country"];
     var state = localStorage["state"];
     var city = localStorage["city"];
 
-    if (!qty || !type || !country || !state || !city) {
+    if (!type || !country || !state || !city) {
         return;
     }
 
-    $("#entry_qty").val(qty);
+    //$("#entry_qty").val(qty);
+    $("#keywords").val(keywords);
     $("#job_type").val(type);
     $("#country").val(country);
     $(".state").val(state);
